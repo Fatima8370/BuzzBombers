@@ -3,19 +3,27 @@
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 
+#include "Bee.h"
+#include "SprayCan.h"
 using namespace std;
 using namespace sf;
 
 
 int main() {
+	// window size will remain constant
 
-	RenderWindow window(VideoMode(800, 600), "SFML Window");
+	RenderWindow window(VideoMode(1200, 900), "Buzz Bombers");
 
-	CircleShape shape(50);
+	// this game is entirely made from scratch
+	// RELEARNING SFML and OOP Concepts
+	// to solidify my understanding of C++ and SFML
 
-	shape.setFillColor(Color::Green);
+	RectangleShape ground(Vector2f(1200, 100));
 
-	shape.setPosition(375, 275);
+	SprayCan sprayCan;
+
+	ground.setFillColor(Color::Green);
+	ground.setPosition(0, 800);
 
 	while (window.isOpen()) {
 		Event event;
@@ -24,7 +32,11 @@ int main() {
 				window.close();
 		}
 		window.clear();
-		window.draw(shape);
+
+		window.draw(ground);
+
+		sprayCan.draw(window);
+
 		window.display();
 	}
 
