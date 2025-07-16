@@ -41,5 +41,14 @@
     <ClInclude Include="PowerUps.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HummingBird.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

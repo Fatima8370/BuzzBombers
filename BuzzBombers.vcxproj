@@ -137,8 +137,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="Bee.h" />
+    <ClInclude Include="Hive.h" />
+    <ClInclude Include="HummingBird.h" />
     <ClInclude Include="Hitbox.h" />
     <ClInclude Include="PowerUps.h" />
     <ClInclude Include="SprayCan.h" />

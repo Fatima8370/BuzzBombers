@@ -31,12 +31,14 @@ public:
 
 	float GetLength() const { return length; }
 	float GetWidth() const { return width; }
-	float GetX() const { return x; } // dont think ill need this
-	float GetY() const { return y; } // dont think ill need this
+
+	float GetX() const { return x; } 
+	float GetY() const { return y; } 
 
 	void updateHitbox(float x, float y) {
 
-
+		this->x = x;
+		this->y = y;
 	}
 
 	void setHitbox(float x, float y, float l, float w) {
@@ -52,17 +54,16 @@ public:
 			y < other.y + other.length && y + length > other.y);
 	}
 
-	/*
 	
-	since this game is a shooting game
-	it only needs to check bottom collision with the bullet
+	void drawHitBox(RenderWindow& window) {
+		RectangleShape hitboxRect;
+		hitboxRect.setSize(Vector2f(width, length));
+		hitboxRect.setPosition(x, y);
+		hitboxRect.setOutlineColor(Color::Red);
+		hitboxRect.setOutlineThickness(2.0f);
+		hitboxRect.setFillColor(Color(0, 0, 0, 0));
+		window.draw(hitboxRect);
+	}
 
-	but we also have bee hives
-	on which when the bees collide with the hive
-	they shift down a level
-	
-	*/
-	
-	
 
 };
